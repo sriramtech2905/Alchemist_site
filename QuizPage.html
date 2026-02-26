@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chemistry Quiz</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="alchemist.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-lg custom-navbar mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand gradient-text" href="Alchemist2.html">🕷Alchemist</a>
+    <button
+      class="navbar-toggler text-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      ☰
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link neon-link" href="Alchemist2.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link neon-link" href="ReactionPage.html">Reaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link neon-link" href="QuizPage.html">Quiz</a>
+        </li>
+      </ul>
+
+      <form
+        class="d-flex align-items-center ms-3"
+        id="searchForm"
+        role="search"
+        style="max-width: 220px; gap: 4px;"
+      >
+        <input
+          class="form-control neon-input"
+          type="search"
+          id="searchInput"
+          placeholder="Search Element"
+          aria-label="Search"
+          style="min-width: 100px; height: 32px; padding: 4px 8px; font-size: 0.85rem;"
+        />
+        <button class="btn neon-btn" type="submit" id="searchBtn" style="height: 32px; padding: 0 10px; font-size: 0.85rem; white-space: nowrap;">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Chemistry Quiz</h1>
+  
+  <div id="quiz-container" class="card shadow-lg p-5">
+    <div id="quiz-content">
+      <div id="question-container" class="mb-4">
+        <h3 id="question" class="mb-3"></h3>
+        <div id="options" class="d-grid gap-2"></div>
+      </div>
+      
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-secondary" id="prevBtn" style="display: none;">Previous</button>
+        <span id="progress" class="text-muted"></span>
+        <button class="btn btn-primary" id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="results-container" style="display: none;">
+      <h2 class="text-center mb-4">Quiz Results</h2>
+      <div class="text-center">
+        <h4>Your Score: <span id="score"></span>/<span id="total"></span></h4>
+        <p id="percentage" class="lead"></p>
+      </div>
+      <div id="results-details" class="mt-4"></div>
+      <button class="btn btn-primary" id="retakeBtn">Retake Quiz</button>
+      <a href="Alchemist2.html" class="btn btn-secondary">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<script src="QuizPage.js"></script>
+</body>
+</html>
